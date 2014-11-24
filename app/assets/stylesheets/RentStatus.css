@@ -1,0 +1,16 @@
+body {
+	
+}
+
+
+#rs_nav {
+	background-color: #ececec;
+	color: #ed6f59;
+	margin-bottom: 0;
+}
+
+#breadcrumb_container {
+	padding: 1em; 
+	background-color:#323232; 
+	color: white;
+}

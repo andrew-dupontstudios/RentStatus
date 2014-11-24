@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<%= render 'layouts/header'%>
+	<div id="breadcrumb_container" class="col-md-12">
+		some breadcrumbs
+	</div>	
+	<div class="col-md-12 center">
+	<%= yield %>
+	</div>
 </body>
 </html>
