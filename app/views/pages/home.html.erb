@@ -1,7 +1,7 @@
 
 <% if user_signed_in? %>
 	<%= link_to 'Add A Property', new_property_path %><br/>
-	<% current_user.properties.each do |property| %>
+	<% current_user.properties.find_each do |property| %>
 	  <div style="border: solid">
 	  <%= property.street_address %><br/>
 	  <%= property.zip %><br/>

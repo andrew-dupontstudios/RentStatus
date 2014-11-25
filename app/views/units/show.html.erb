@@ -1,0 +1,142 @@
+<p>
+  <strong>Property</strong>
+  <%= @property.street_address %>
+</p>
+ 
+<h2>Add a comment:</h2>
+<%= form_for([@property, @property.units.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :rent %><br>
+    <%= f.number_field :rent %>
+  </p>
+  <p>
+    <%= f.label :tenant0_first_name %><br>
+    <%= f.text_field :tenant0_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant0_last_name %><br>
+    <%= f.text_field :tenant0_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant0_phone %><br>
+    <%= f.text_field :tenant0_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant0_email %><br>
+    <%= f.text_field :tenant0_email %>
+  </p>
+  <p>
+    <%= f.label :tenant1_first_name %><br>
+    <%= f.text_field :tenant0_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant1_last_name %><br>
+    <%= f.text_field :tenant0_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant1_phone %><br>
+    <%= f.text_field :tenant0_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant1_email %><br>
+    <%= f.text_field :tenant0_email %>
+  </p>
+  <p>
+    <%= f.label :tenant2_first_name %><br>
+    <%= f.text_field :tenant0_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant2_last_name %><br>
+    <%= f.text_field :tenant0_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant2_phone %><br>
+    <%= f.text_field :tenant0_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant2_email %><br>
+    <%= f.text_field :tenant0_email %>
+  </p>
+  <p>
+    <%= f.label :tenant3_first_name %><br>
+    <%= f.text_field :tenant0_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant3_last_name %><br>
+    <%= f.text_field :tenant0_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant3_phone %><br>
+    <%= f.text_field :tenant0_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant3_email %><br>
+    <%= f.text_field :tenant0_email %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image1 %>
+    <%= f.file_field :image1, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image2 %>
+    <%= f.file_field :image2, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image3 %>
+    <%= f.file_field :image3, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image4 %>
+    <%= f.file_field :image4, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image5 %>
+    <%= f.file_field :image5, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image6 %>
+    <%= f.file_field :image6, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image7 %>
+    <%= f.file_field :image7, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image8 %>
+    <%= f.file_field :image8, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image9 %>
+    <%= f.file_field :image9, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image10 %>
+    <%= f.file_field :image10, class: "form-control" %>
+  </p>
+  
+  <p class="form-group">
+    <%= f.label :image11 %>
+    <%= f.file_field :image11, class: "form-control" %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', articles_path %>
+| <%= link_to 'Edit', edit_article_path(@article) %>

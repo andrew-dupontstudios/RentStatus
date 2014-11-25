@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rent: 1.5
+  unit.tenant0_first_name: MyString
+  unit.tenant0_last_name: MyString
+  unit.tenant0_phone: MyString
+  unit.tenant0_email: MyString
+  unit.vacancy: false
+  property_id: 
+
+two:
+  name: MyString
+  rent: 1.5
+  unit.tenant0_first_name: MyString
+  unit.tenant0_last_name: MyString
+  unit.tenant0_phone: MyString
+  unit.tenant0_email: MyString
+  unit.vacancy: false
+  property_id: 

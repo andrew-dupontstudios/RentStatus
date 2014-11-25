@@ -9,3 +9,101 @@
 </p>
 
 <%= image_tag @property.image.url(:medium) %>
+
+
+<h2>Comments</h2>
+<% @property.units.each do |unit| %>
+  <p>
+    <strong>Unit Name:</strong>
+    <%= unit.name %>
+  </p>
+ 
+  <p>
+    <strong>Tenant:</strong>
+    <%= unit.tenant0_first_name %> <%= unit.tenant0_last_name %>
+  </p>
+<% end %>
+
+
+
+<h2>Add a comment:</h2>
+<%= form_for([@property, @property.units.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :rent %><br>
+    <%= f.number_field :rent %>
+  </p>
+  <p>
+    <%= f.label :tenant0_first_name %><br>
+    <%= f.text_field :tenant0_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant0_last_name %><br>
+    <%= f.text_field :tenant0_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant0_phone %><br>
+    <%= f.text_field :tenant0_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant0_email %><br>
+    <%= f.text_field :tenant0_email %>
+  </p>
+  <p>
+    <%= f.label :tenant1_first_name %><br>
+    <%= f.text_field :tenant1_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant1_last_name %><br>
+    <%= f.text_field :tenant1_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant1_phone %><br>
+    <%= f.text_field :tenant1_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant1_email %><br>
+    <%= f.text_field :tenant1_email %>
+  </p>
+  <p>
+    <%= f.label :tenant2_first_name %><br>
+    <%= f.text_field :tenant2_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant2_last_name %><br>
+    <%= f.text_field :tenant2_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant2_phone %><br>
+    <%= f.text_field :tenant2_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant2_email %><br>
+    <%= f.text_field :tenant2_email %>
+  </p>
+  <p>
+    <%= f.label :tenant3_first_name %><br>
+    <%= f.text_field :tenant3_first_name %>
+  </p>
+  <p>
+    <%= f.label :tenant3_last_name %><br>
+    <%= f.text_field :tenant3_last_name %>
+  </p>
+  <p>
+    <%= f.label :tenant3_phone %><br>
+    <%= f.text_field :tenant3_phone %>
+  </p>
+  <p>
+    <%= f.label :tenant3_email %><br>
+    <%= f.text_field :tenant3_email %>
+  </p>
+  
+  
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
