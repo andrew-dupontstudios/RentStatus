@@ -10,4 +10,12 @@ protected
    devise_parameter_sanitizer.for(:sign_up) << :name
    devise_parameter_sanitizer.for(:account_update) << :name
  end
+ 
+def create
+  @property = Property.new(params[:property])
+ 
+  @property.save
+  redirect_to @property
+end
+ 
 end

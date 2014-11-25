@@ -1,0 +1,11 @@
+<p>
+  <strong>Address:</strong>
+  <%= @property.street_address %>
+</p>
+ 
+<p>
+  <strong>Zip:</strong>
+  <%= @property.zip %>
+</p>
+
+<%= image_tag @property.image.url(:medium) %>

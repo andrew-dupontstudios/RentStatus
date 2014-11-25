@@ -1,0 +1,15 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Street Address</th>
+    <th>Zip Code</th>
+  </tr>
+ 
+  <% @properties.each do |property| %>
+    <tr>
+      <td><%= property.street_address %></td>
+      <td><%= property.zip %></td>
+    </tr>
+  <% end %>
+</table>
