@@ -1,18 +1,21 @@
 
 <% if user_signed_in? %>
-	<%= link_to 'Add A Property', new_property_path %><br/>
+	
 	<% current_user.properties.find_each do |property| %>
-	  <div style="border: solid">
+	  <div class="col-md-4" style="border: solid">
 	  <%= property.street_address %><br/>
-	  <%= property.zip %><br/>
+	  <br/>
 	  <% if property.image.exists? %>
 	  	<%= image_tag property.image.url(:medium) %>
+	  	
+	  	<%= link_to 'Show', property_path(property) %>
 	  	<%= link_to 'Edit', edit_property_path(property) %>
 	  <% end %>
 	 	<br/>
 	 	<br/>
 		</div>	
 	<% end %>
+	<%= link_to 'Add A Property', new_property_path %>
 <% else %>
 	<p>Please Sign In</p>
 <% end %>

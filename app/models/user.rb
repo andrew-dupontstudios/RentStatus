@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :properties, dependent: :destroy
   validates :name, presence: true
+  accepts_nested_attributes_for :properties
 end

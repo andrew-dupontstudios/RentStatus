@@ -1,0 +1,55 @@
+<h1>Listing Units</h1>
+ 
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Rent</th>
+		<th>Tenant0 First</th>
+		<th>Tenant0 Last</th>
+		<th>Tenant0 Phone</th>
+		<th>Tenant0 Email</th>
+		<th>Tenant1 Fist</th>
+		<th>Tenant1 Last</th>
+		<th>Tenant1 Phone</th>
+		<th>Tenant1 Email</th>
+		<th>Tenant2 First</th>
+		<th>Tenant2 Last</th>
+		<th>Tenant2 Phone</th>
+		<th>Tenant2 Email</th>
+		<th>Tenant3 Fist</th>
+		<th>Tenant3 Last</th>
+		<th>Tenant3 Phone</th>
+		<th>Tenant3 Email</th>
+	</tr>
+ 
+	<% @units.each do |unit| %>
+		<tr>
+			<td><%= unit.name %></td>
+			<td><%= unit.rent %></td>
+			<td><%= unit.tenant0_first_name %></td>
+			<td><%= unit.tenant0_last_name %></td>
+			<td><%= unit.tenant0_phone %></td>
+			<td><%= unit.tenant0_email %></td>
+			<td><%= unit.tenant1_first_name %></td>
+			<td><%= unit.tenant1_last_name %></td>
+			<td><%= unit.tenant1_phone %></td>
+			<td><%= unit.tenant1_email %></td>
+			<td><%= unit.tenant2_first_name %></td>
+			<td><%= unit.tenant2_last_name %></td>
+			<td><%= unit.tenant2_phone %></td>
+			<td><%= unit.tenant2_email %></td>
+			<td><%= unit.tenant3_first_name %></td>
+			<td><%= unit.tenant3_last_name %></td>
+			<td><%= unit.tenant3_phone %></td>
+			<td><%= unit.tenant3_email %></td>
+			
+			<td><%= link_to 'Edit', edit_unit_path(@unit) %></td>
+			<td><%= link_to 'Destroy Comment', [unit.property, unit],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	
+	<% end %>
+	
+</table>
+

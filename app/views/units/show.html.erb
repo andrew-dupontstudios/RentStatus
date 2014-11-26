@@ -1,142 +1,21 @@
-<p>
-  <strong>Property</strong>
-  <%= @property.street_address %>
-</p>
+
+
+
+
+<div class="report_line row">  
+	<h3 class="report_heading col-md-6">Apartment Number or Name:</h3>
+	<h3 class="report_item col-md-6"><%= @unit.name %></h3>
+	</div><!--report_line-->
  
-<h2>Add a comment:</h2>
-<%= form_for([@property, @property.units.build]) do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :rent %><br>
-    <%= f.number_field :rent %>
-  </p>
-  <p>
-    <%= f.label :tenant0_first_name %><br>
-    <%= f.text_field :tenant0_first_name %>
-  </p>
-  <p>
-    <%= f.label :tenant0_last_name %><br>
-    <%= f.text_field :tenant0_last_name %>
-  </p>
-  <p>
-    <%= f.label :tenant0_phone %><br>
-    <%= f.text_field :tenant0_phone %>
-  </p>
-  <p>
-    <%= f.label :tenant0_email %><br>
-    <%= f.text_field :tenant0_email %>
-  </p>
-  <p>
-    <%= f.label :tenant1_first_name %><br>
-    <%= f.text_field :tenant0_first_name %>
-  </p>
-  <p>
-    <%= f.label :tenant1_last_name %><br>
-    <%= f.text_field :tenant0_last_name %>
-  </p>
-  <p>
-    <%= f.label :tenant1_phone %><br>
-    <%= f.text_field :tenant0_phone %>
-  </p>
-  <p>
-    <%= f.label :tenant1_email %><br>
-    <%= f.text_field :tenant0_email %>
-  </p>
-  <p>
-    <%= f.label :tenant2_first_name %><br>
-    <%= f.text_field :tenant0_first_name %>
-  </p>
-  <p>
-    <%= f.label :tenant2_last_name %><br>
-    <%= f.text_field :tenant0_last_name %>
-  </p>
-  <p>
-    <%= f.label :tenant2_phone %><br>
-    <%= f.text_field :tenant0_phone %>
-  </p>
-  <p>
-    <%= f.label :tenant2_email %><br>
-    <%= f.text_field :tenant0_email %>
-  </p>
-  <p>
-    <%= f.label :tenant3_first_name %><br>
-    <%= f.text_field :tenant0_first_name %>
-  </p>
-  <p>
-    <%= f.label :tenant3_last_name %><br>
-    <%= f.text_field :tenant0_last_name %>
-  </p>
-  <p>
-    <%= f.label :tenant3_phone %><br>
-    <%= f.text_field :tenant0_phone %>
-  </p>
-  <p>
-    <%= f.label :tenant3_email %><br>
-    <%= f.text_field :tenant0_email %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image1 %>
-    <%= f.file_field :image1, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image2 %>
-    <%= f.file_field :image2, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image3 %>
-    <%= f.file_field :image3, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image4 %>
-    <%= f.file_field :image4, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image5 %>
-    <%= f.file_field :image5, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image6 %>
-    <%= f.file_field :image6, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image7 %>
-    <%= f.file_field :image7, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image8 %>
-    <%= f.file_field :image8, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image9 %>
-    <%= f.file_field :image9, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image10 %>
-    <%= f.file_field :image10, class: "form-control" %>
-  </p>
-  
-  <p class="form-group">
-    <%= f.label :image11 %>
-    <%= f.file_field :image11, class: "form-control" %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="report_line row">  
+	<h3 class="report_heading col-md-6">Unit Location</h3>
+	<h3 class="report_item col-md-6"><%= @unit.property.street_address %></h3>
+	</div><!--report_line--> 
  
-<%= link_to 'Back', articles_path %>
-| <%= link_to 'Edit', edit_article_path(@article) %>
+<div class="report_line row">  
+	<h3 class="report_heading col-md-6">Primary Contact</h3>
+	<h3 class="report_item col-md-6"><%= @unit.tenant0_first_name %><%= @unit.tenant0_last_name %></h3>
+	<h3 class="report_item col-md-6"><%= @unit.tenant0_phone %></h3>
+	<h3 class="report_item col-md-6"><%= @unit.tenant0_email %></h3>
+	</div><!--report_line-->  
+

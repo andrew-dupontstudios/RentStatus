@@ -14,3 +14,11 @@ body {
 	background-color:#323232; 
 	color: white;
 }
+
+
+/*FOR DEVELOPMENT*/
+
+/*Unit Show*/
+.report_line {
+	border-bottom: 1px solid black;
+}

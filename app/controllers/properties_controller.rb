@@ -16,35 +16,40 @@ class PropertiesController < ApplicationController
   def index
     @properties = Property.all
   end
+
   
-  def edit
-    @property = Property.find(params[:id])
+    def edit
+      @property = current_user.properties.find(params[:id])
   end
+
+  
   
   def show
-    @property = Property.find(params[:id])
+    @property = current_user.properties.find(params[:id])
   end
 
   def update
-    @property = Property.find(params[:id])
-   
-    if @property.update(article_params)
+    @property = current_user.properties.find(params[:id])
+    if @property.update(property_params)
       redirect_to @property
     else
       render 'edit'
     end
   end
 
+
+
+
   def destroy
     @property = Property.find(params[:id])
     @property.destroy
    
-    redirect_to articles_path
+    redirect_to properties_path
   end
 
 private
 def property_params
-      params.require(:properties).permit(:street_address, :city, :state, :zip, :image)
+      params.require(:property).permit(:street_address, :city, :state, :zip, :image)
       
     end
 end
